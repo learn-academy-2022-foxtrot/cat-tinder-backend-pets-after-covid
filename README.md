@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+10/24/22
+Creating the App & Backend Structure
 
-Things you may want to cover:
+rails new cat-tinder-backend -d postgresql -T
+created new branch (main)
+added it to repository
+initial commit
+checked out to backend branch
+created db
+bundle add rspec-rails
+rails g rspec:install
+initial commit for rspec files
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails g resource Pet
+rails db:migrate
+wrote seeds
+went into rails c, displayed items
+ran bundle
+added files, committed, pushed
