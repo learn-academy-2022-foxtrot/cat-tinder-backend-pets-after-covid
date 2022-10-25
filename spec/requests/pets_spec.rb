@@ -49,6 +49,19 @@ RSpec.describe "Pets", type: :request do
   #     expect(pet.name).to eq 'Daisy'
   #   end
   # end
+  describe "cannot create a pet without valid attributes" do
+    it "doesn't create a pet without a name" do
+     pet_params = {
+        pet: {
+           age: 3, enjoys: 'biting stuff', image: 'url'
+       }
+     }
+     post '/pets', params: pet_params
+     expect(response.status).to eq(422)
+     json = JSON.parse(response.body)
+     expect(json["name"]).to include "can't be blank"
+     end
+  end
 
 end
 
