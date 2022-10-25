@@ -17,9 +17,20 @@ class PetsController < ApplicationController
   def update
     pet = Pet.find(params[:id])
     pet.update(pet_params)
+    if pet.valid?
+      render json: pet
+    else
+      render json: pet.errors, status: :unprocessable_entity
+    end
   end
 
   def destroy
+    pet = Pet.find(params[:id])
+    if pet.destroy
+      render json: pet
+    else
+      render json: pet.errors
+    end
   end
 
   private
