@@ -28,27 +28,26 @@ RSpec.describe "Pets", type: :request do
     end
   end
 
-  # describe "PATCH /update" do
-  #   it "updates a pet" do
-  #     pet_params = {
-  #       pet: {
-  #         name: 'Hazel', age: 3, enjoys: 'biting stuff', image: 'url'
-  #       }
-  #     }
-  #     post '/pets', params: pet_params
-  #     pet = Pet.first
+  describe "PATCH /update" do
+    it "updates a pet" do
+      pet1 = Pet.create(id: 1, name: 'Bear', age: 3, enjoys: 'Lots of pets and snacks', image: 'URL')
+      p "pet", pet1
+     
+      pet1 = patch '/pets/1',  
+        params:{
+          pet:{
+            id: 1, name: 'Layla', age: 4, enjoys: 'Bullying her sister Bear', image: 'URL-2'}}
+      p "pet", pet1
+
+      expect(response.status).to eq(200)
+      pet = Pet.find(1)
       
-  #     pet_params = {
-  #       pet: {
-  #         name: 'Daisy', age: 3, enjoys: 'biting stuff', image: 'url'
-  #       }
-  #     }
-  
-  #     patch "/pets/#{pet.id}", params: pet_params
-      
-  #     expect(pet.name).to eq 'Daisy'
-  #   end
-  # end
+      expect(pet.name).to eq('Layla')
+    end
+  end
+
+
+
   describe "cannot create a pet without valid attributes" do
     it "doesn't create a pet without a name" do
      pet_params = {
