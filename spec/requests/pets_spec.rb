@@ -43,10 +43,10 @@ RSpec.describe "Pets", type: :request do
             name: 'Layla', age: 4, enjoys: 'Being mean to her sister', image: 'URL'
           }
         }
-        p pet.id
+ 
         patch "/pets/#{pet.id}", params: update_params 
         pet = Pet.first
-        p pet.id
+  
 
       expect(response.status).to eq(200)
       
