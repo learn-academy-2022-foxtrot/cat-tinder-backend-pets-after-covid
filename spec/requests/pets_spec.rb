@@ -30,16 +30,25 @@ RSpec.describe "Pets", type: :request do
 
   describe "PATCH /update" do
     it "updates a pet" do
-      Pet.create(id: 1, name: 'Bear', age: 3, enjoys: 'Lots of pets and snacks', image: 'URL')
+      pet_params = {
+        pet: {
+          name: 'Hazel', age: 3, enjoys: 'biting stuff', image: 'url'
+        }
+      }
 
-      patch '/pets/1',  
-        params:{
-          pet:{
-            id: 1, name: 'Layla', age: 4, enjoys: 'Bullying her sister Bear', image: 'URL-2'}}
-
+      post '/pets', params: pet_params 
+      pet = Pet.first
+        update_params = {
+          pet: {
+            name: 'Layla', age: 4, enjoys: 'Being mean to her sister', image: 'URL'
+          }
+        }
+ 
+        patch "/pets/#{pet.id}", params: update_params 
+        pet = Pet.first
+  
 
       expect(response.status).to eq(200)
-      pet = Pet.find(1)
       
       expect(pet.name).to eq('Layla')
     end
