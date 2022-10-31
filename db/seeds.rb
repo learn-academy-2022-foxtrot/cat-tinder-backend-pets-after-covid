@@ -7,25 +7,78 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 pets = [
-    {
-      name: 'Felix',
-      age: 2,
-      enjoys: 'Long naps on the couch, and a warm fire.',
-      image: 'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&q=80'
-    },
-    {
-      name: 'Homer',
-      age: 12,
-      enjoys: 'Food mostly, really just food.',
-      image: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1015&q=80'
-    },
-    {
-      name: 'Jack',
-      age: 5,
-      enjoys: 'Furrrrociously hunting bugs.',
-      image: 'https://images.unsplash.com/photo-1492370284958-c20b15c692d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1049&q=80'
-    }
-  ]
+  {
+
+    name: "Pickles",
+    age: 7,
+    enjoys: "Eating abominations that should not be known to man or beast.",
+    image:
+      "https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+
+    name: "Espio",
+    age: 2,
+    enjoys: "Blending in with the crowd.",
+    image:
+      "https://images.pexels.com/photos/751687/pexels-photo-751687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+
+    name: "Mr Krabs",
+    age: 23,
+    enjoys: "Not being held by arrogant little kids.",
+    image: "https://images.pexels.com/photos/7237731/pexels-photo-7237731.jpeg",
+  },
+  {
+
+    name: "Rupert",
+    age: 2,
+    enjoys: "Croak-a-Cola and lollihops.",
+    image:
+      "https://images.pexels.com/photos/45863/frog-butterfly-pond-mirroring-45863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+
+    name: "Mr. J",
+    age: 4,
+    enjoys: "Eating Mice Crispies and knocking glasses off counters.",
+    image:
+      "https://images.pexels.com/photos/69932/tabby-cat-close-up-portrait-69932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+
+    name: "Hamster",
+    age: 1.5,
+    enjoys: "Taking the wheekends off to enjoy some veggies.",
+    image:
+      "https://images.pexels.com/photos/10926606/pexels-photo-10926606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+
+    name: "Big Man",
+    age: 15,
+    enjoys: 'Being the 5 time winner of the "Rolliest-Polly."',
+    image:
+      "https://images.pexels.com/photos/12568711/pexels-photo-12568711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+
+    name: "Dog",
+    age: 3,
+    enjoys: "Getting betta every day at being a fish.",
+    image:
+      "https://images.pexels.com/photos/325044/pexels-photo-325044.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+
+    name: "Jojo",
+    age: 25,
+    enjoys: "Waking his owners up at 3am.",
+    image:
+      "https://images.pexels.com/photos/11615613/pexels-photo-11615613.jpeg",
+  },
+];
   
   pets.each do |each_pet|
     Pet.create each_pet
